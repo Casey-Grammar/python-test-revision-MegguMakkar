@@ -5,15 +5,13 @@
 
 def main():
     #Write your code here
-    
+    listOfCatsNames = input("Cats: ")
+    # Split the input string into a list of names and print the number of names
+    catsNames = listOfCatsNames.split()
+    print("You have " + str(len(catsNames)) + " cats.")
 
 
 
     # End of your code here
-
-
-
-
-
 if __name__ == '__main__':
     main()

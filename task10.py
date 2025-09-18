@@ -11,14 +11,16 @@
 
 def main():
     #Write your code here
-    
+    studentsNames = input("Students: ")
+    print('Class Roll')
+    # Split the input string into a list of names, capitalize each name, sort the list, and print each name
+    namesList = studentsNames.split()
+    capitalizedNames = [name.capitalize() for name in namesList]
+    capitalizedNames.sort()
+    for name in capitalizedNames:
+        print(name)
 
 
     # End of your code here
-
-
-
-
-
 if __name__ == '__main__':
     main()

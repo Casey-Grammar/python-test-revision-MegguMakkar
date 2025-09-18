@@ -2,7 +2,7 @@ import unittest
 from unittest.mock import patch
 import io
 import sys
-import Task10
+import task10
 
 class TestTask10(unittest.TestCase):
     
@@ -10,7 +10,7 @@ class TestTask10(unittest.TestCase):
     @patch('sys.stdout', new_callable=io.StringIO)
     def test_already_capitalized_names(self, mock_stdout, mock_input):
         """Test with names that are already properly capitalized"""
-        Task10.main()
+        task10.main()
         expected_output = "Class Roll\nJohn\nMary\nPeter\nSusan"
         self.assertEqual(mock_stdout.getvalue().strip(), expected_output)
     
@@ -18,7 +18,7 @@ class TestTask10(unittest.TestCase):
     @patch('sys.stdout', new_callable=io.StringIO)
     def test_lowercase_names(self, mock_stdout, mock_input):
         """Test with all lowercase names"""
-        Task10.main()
+        task10.main()
         expected_output = "Class Roll\nJohn\nMary\nPeter\nSusan"
         self.assertEqual(mock_stdout.getvalue().strip(), expected_output)
     
@@ -26,7 +26,7 @@ class TestTask10(unittest.TestCase):
     @patch('sys.stdout', new_callable=io.StringIO)
     def test_uppercase_names(self, mock_stdout, mock_input):
         """Test with all uppercase names"""
-        Task10.main()
+        task10.main()
         expected_output = "Class Roll\nJohn\nMary\nPeter\nSusan"
         self.assertEqual(mock_stdout.getvalue().strip(), expected_output)
     
@@ -34,7 +34,7 @@ class TestTask10(unittest.TestCase):
     @patch('sys.stdout', new_callable=io.StringIO)
     def test_mixed_case_names(self, mock_stdout, mock_input):
         """Test with mixed case names"""
-        Task10.main()
+        task10.main()
         expected_output = "Class Roll\nJohn\nMary\nPeter\nSusan"
         self.assertEqual(mock_stdout.getvalue().strip(), expected_output)
     
@@ -42,7 +42,7 @@ class TestTask10(unittest.TestCase):
     @patch('sys.stdout', new_callable=io.StringIO)
     def test_sorting(self, mock_stdout, mock_input):
         """Test that names are properly sorted alphabetically"""
-        Task10.main()
+        task10.main()
         expected_output = "Class Roll\nAlice\nBob\nDavid\nZack"
         self.assertEqual(mock_stdout.getvalue().strip(), expected_output)
     
@@ -50,7 +50,7 @@ class TestTask10(unittest.TestCase):
     @patch('sys.stdout', new_callable=io.StringIO)
     def test_empty_input(self, mock_stdout, mock_input):
         """Test with empty input"""
-        Task10.main()
+        task10.main()
         expected_output = "Class Roll"
         self.assertEqual(mock_stdout.getvalue().strip(), expected_output)
     
@@ -58,7 +58,7 @@ class TestTask10(unittest.TestCase):
     @patch('sys.stdout', new_callable=io.StringIO)
     def test_hyphenated_names(self, mock_stdout, mock_input):
         """Test with hyphenated and multiple-word names"""
-        Task10.main()
+        task10.main()
         expected_output = "Class Roll\nJohn-paul\nJr.\nMary-kate\nRobert"
         self.assertEqual(mock_stdout.getvalue().strip(), expected_output)
     
@@ -66,7 +66,7 @@ class TestTask10(unittest.TestCase):
     @patch('sys.stdout', new_callable=io.StringIO)
     def test_extra_spaces(self, mock_stdout, mock_input):
         """Test with extra spaces between names"""
-        Task10.main()
+        task10.main()
         expected_output = "Class Roll\nAlice\nBob\nCarol"
         self.assertEqual(mock_stdout.getvalue().strip(), expected_output)
 

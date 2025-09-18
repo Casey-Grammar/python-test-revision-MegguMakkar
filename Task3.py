@@ -5,7 +5,7 @@ def main():
     #Write your code for input here
     dogyears = int(input('Dog years: '))
     humanyears = dogyears * 7
-    print(f'Human years = {human years}')
+    print(f'Human years = {humanyears}')
     #End of your code for input here
 
 if __name__ == '__main__':
