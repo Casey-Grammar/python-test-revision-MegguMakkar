@@ -4,7 +4,7 @@
 
 def main():
     #Fix the code starting here
-    drink = input("WHAT DRINK DO YOU WANT TO ORDER?" )
+        drink = input("WHAT DRINK DO YOU WANT TO ORDER?")
     if drink.islower():
      print("I DIDN'T HEAR YOUR ORDER!") 
     elif drink.isupper():
@@ -12,7 +12,7 @@ def main():
       CoffeeScoops = many * 4
     print(f'{many} {drink}S COMING RIGHT UP!')
     print(f'The barrister needs {CoffeeScoops} scoops of coffee in the coffee making machine')
-    
+  
 
 # End of code to be fixed
 
